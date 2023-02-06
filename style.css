@@ -1,0 +1,215 @@
+/*Importamos fuentes de Google*/
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Oxygen+Mono&display=swap');
+@font-palette-values --myPalette {
+    font-family: "Nabla";
+    base-palette: 3;
+    override-colors: 6 #fff;
+  };
+
+body{
+    background-color:#FBFBF7;
+    margin: 0%;
+}
+.tituloPrincipal{
+    padding: 0px 3% 0px 3%;
+    background-color: #ffbea6;
+    /*font-family: 'Nabla', cursive;*/
+    font-family: 'Nabla', cursive;
+    font-palette: --myPalette;
+    font-size: 55px;
+    margin: 0px;
+}
+.nav{
+    padding: 15px;
+    background-color:darkslategrey;
+    /*margin: 3%;
+    border-radius: 5px;
+    border: 0.5px solid;
+    box-shadow: 1px 1px 5px 1px #888888;*/
+}
+.nav a{
+    color: white;
+    padding: 0px 2%;
+    font-family: 'Oxygen Mono', monospace;    
+    font-size: 20px;
+    text-decoration: none;
+    word-spacing: 0px;
+    letter-spacing: 1px;
+}
+.nav a:hover{
+    background-color: darkmagenta;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.bkgn-sub{
+    display: block; 
+    object-fit: cover; 
+    border-radius: 0px; 
+    width: 100%; 
+    height: 26vh; 
+    opacity: 1; 
+    object-position: center 50%;
+}
+
+.saludo{
+    font-size: 40px;
+    margin: 10px 5px;
+}
+.saludo:hover{
+    animation: saludando 1s;
+    
+}
+@keyframes saludando {
+    10%{font-size: 45px;transform: translateY(-10px);}
+    25%{rotate: 15deg;font-size: 45px;transform: translateY(-10px);}
+    35%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
+    45%{rotate: 10deg;font-size: 45px;transform: translateY(-10px);}
+    55%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
+    65%{rotate: 10deg;font-size: 45px;transform: translateY(-10px);}
+    75%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
+    85%{rotate: 10deg;}
+}
+
+.tituloSaludo{
+    display: flex;
+}
+
+
+
+.row{
+    display: grid;
+    gap: 1rem;
+    /*grid-auto-rows: rem;*/
+    grid-template-columns: repeat(auto-fit, minmax(370px,1fr));
+    margin: 0px 3%;
+}
+
+
+
+/* CSS para CARDS - Inicio -------------------------------------------- */
+.card{
+    width: 280px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    border: 0.3px solid rgb(188, 188, 188);
+    box-shadow: 2px 2px 5px 2px #d8d8d8;
+}
+.descrip{
+    font-family: 'IBM Plex Sans';
+    text-align: justify;
+    font-size: 12px;
+    margin: 3px;
+    padding: 4px;
+    overflow: clip;
+    background-color: rgb(253, 253, 253);
+    height: 120px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 0px 0px ;
+}
+.descrip-bk1{
+    background-image: url("https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+}
+.descrip-bk2{
+    background-image: url("https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
+}
+.descrip-bk3{
+    background-image: url("https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80");
+}
+.tituloCard{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    min-height: 50px;
+    padding-left: 3%;
+    border-radius: 0px 0px 5px 5px;
+}
+.tituloCard:hover{
+    background-color: #F8F8F8;
+}
+.tituloText{
+    margin: 0px;
+    text-align: start;
+    font-size: 14px;
+    /*font-weight: bold;*/
+    font-family: 'Oxygen Mono', monospace;
+    margin-left: 5px;
+}
+/* CSS para CARDS - Final -------------------------------------------- */
+
+
+/* CSS para TAJETERO - Inicio ------------------------------------------- */
+.tarjetero{
+    margin: 3% 4%;
+    font-family: 'Oxygen Mono', monospace;
+}
+.tituloConten{
+    min-height: 35px;
+}
+.contenCards{
+    display: grid;
+    min-height: 35px;
+    /*background-color:aquamarine;*/
+    padding: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 19rem));
+}
+.vistaConten{
+    /*background-color:rgb(97, 61, 255);*/
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    font-family: 'Oxygen Mono', monospace;
+    padding: 5px 5px;
+}
+.tituloTextConten{
+    /*background-color:rgb(255, 61, 249);*/
+    font-size: 20px;
+    font-family: 'Oxygen Mono', monospace;
+    padding: 10px 5px;}
+a{
+    text-decoration: none;
+    text-transform: none;
+}
+/* CSS para TAJETERO - Final -------------------------------------------- */
+
+
+.conten-consept{
+    margin: 5vh 15vw;
+    text-align: justify;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+.migas{
+    display: flex;
+    align-items: center;
+    width: 103px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    font-weight: bold;
+    gap: 8px;
+    text-decoration: none;
+}
+.migas:hover{
+    background-color: #d8d8d8;
+}
+
+.contenedorCajitas{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+.cuadrito{
+    padding: 25px;
+    margin: 2%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgb(0, 174, 174);
+    background-color: coral;
+}
+
+
+
