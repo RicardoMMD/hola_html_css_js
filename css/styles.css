@@ -6,10 +6,17 @@
     override-colors: 6 #fff;
   };
 
+  /* Cambios en elementos/etiquetas HTML */
 body{
     background-color:#FBFBF7;
     margin: 0%;
 }
+a{
+    text-decoration: none;
+    text-transform: none;
+}
+
+/* Cambios en clases */
 .tituloPrincipal{
     padding: 0px 3% 0px 3%;
     background-color: #ffbea6;
@@ -56,10 +63,7 @@ body{
     font-size: 40px;
     margin: 10px 5px;
 }
-.saludo:hover{
-    animation: saludando 1s;
-    
-}
+.saludo:hover{animation: saludando 1s;}
 @keyframes saludando {
     10%{font-size: 45px;transform: translateY(-10px);}
     25%{rotate: 15deg;font-size: 45px;transform: translateY(-10px);}
@@ -73,16 +77,6 @@ body{
 
 .tituloSaludo{
     display: flex;
-}
-
-
-
-.row{
-    display: grid;
-    gap: 1rem;
-    /*grid-auto-rows: rem;*/
-    grid-template-columns: repeat(auto-fit, minmax(370px,1fr));
-    margin: 0px 3%;
 }
 
 
@@ -118,6 +112,9 @@ body{
 }
 .descrip-bk3{
     background-image: url("https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80");
+}
+.descrip-bk4{
+    background-image: url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80");
 }
 .tituloCard{
     display: flex;
@@ -169,10 +166,7 @@ body{
     font-size: 20px;
     font-family: 'Oxygen Mono', monospace;
     padding: 10px 5px;}
-a{
-    text-decoration: none;
-    text-transform: none;
-}
+
 /* CSS para TAJETERO - Final -------------------------------------------- */
 
 
