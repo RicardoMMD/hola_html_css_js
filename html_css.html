@@ -45,13 +45,18 @@
             <div class = 'tituloTextConten'>Conseptos de desarrollo web</div>
             <!-- <hr> -->
         </div>
-        <div class="conten-body">
+        <div class="contenBody">
             <div class = 'colFiltro'>
-                <span class="tituloTextFiltro">Temáticas</span>
+                <li class="tituloTextFiltro">Temáticas
+                    <button id="backend-btn" class="btn">Back-End</button>
+                    <button id="frontend-btn" class="btn">Front-End</button>
+                    <button id="all-btn" class="btn">All</button>
+                </li>
+                
             </div>
             <div class = 'contenCards'>
 
-                <div class = 'card'>
+                <div class = 'card' data-category="frontend">
                     <a href="pages/html.html">
                         <div class = 'descrip descrip-bk1'></div>
                         <div class = 'tituloCard'>
@@ -61,7 +66,7 @@
                     </a>
                 </div>
 
-                <div class = 'card'>
+                <div class = 'card' data-category="frontend">
                     <a href="pages/css.html">
                         <div class = 'descrip descrip-bk2'></div>
                         <div class = 'tituloCard'>
@@ -71,7 +76,7 @@
                     </a>
                 </div>
 
-                <div class = 'card'>
+                <div class = 'card' data-category="all">
                     <a href="pages/des-web.html">
                         <div class = 'descrip descrip-bk3'></div>
                         <div class = 'tituloCard'>
@@ -81,12 +86,32 @@
                     </a>
                 </div>
 
-                <div class = 'card'>
+                <div class = 'card' data-category="all">
                     <a href="pages/js.html">
                         <div class = 'descrip descrip-bk4'></div>
                         <div class = 'tituloCard'>
                         <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="" width="20px" height="20px">
                         <div class = 'tituloText'>JavaScript</div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class = 'card' data-category="backend">
+                    <a href="pages/nodejs.html">
+                        <div class = 'descrip descrip-bk5'></div>
+                        <div class = 'tituloCard'>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="" width="20px" height="20px">
+                        <div class = 'tituloText'>NodeJS</div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class = 'card' data-category="backend">
+                    <a href="pages/py.html">
+                        <div class = 'descrip descrip-bk6'></div>
+                        <div class = 'tituloCard'>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="" width="20px" height="20px">
+                        <div class = 'tituloText'>Python</div>
                     </div>
                     </a>
                 </div>
@@ -103,7 +128,7 @@
 
 
     
-    
+    <script src="./js/script.js"></script>
 </body>
 </html>
 
