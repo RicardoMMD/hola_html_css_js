@@ -15,6 +15,9 @@ a{
     text-decoration: none;
     text-transform: none;
 }
+.tituloConten hr{
+    margin: 0%;
+}
 
 /* Cambios en clases */
 .tituloPrincipal{
@@ -65,7 +68,7 @@ a{
 }
 .saludo:hover{animation: saludando 1s;}
 @keyframes saludando {
-    10%{font-size: 45px;transform: translateY(-10px);}
+    10%{font-size: 45px;}
     25%{rotate: 15deg;font-size: 45px;transform: translateY(-10px);}
     35%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
     45%{rotate: 10deg;font-size: 45px;transform: translateY(-10px);}
@@ -139,11 +142,20 @@ a{
 
 
 /* CSS para TAJETERO - Inicio ------------------------------------------- */
+.conten-body{
+    display: flex;
+}
+.colFiltro{
+    background-color: beige;
+    width: 200px;
+}
 .tarjetero{
-    margin: 3% 4%;
+    background-color: #ffbea6;
+    margin: 1% 12%;
     font-family: 'Oxygen Mono', monospace;
 }
 .tituloConten{
+    background-color: aquamarine;
     min-height: 35px;
 }
 .contenCards{
@@ -156,7 +168,9 @@ a{
 .vistaConten{
     /*background-color:rgb(97, 61, 255);*/
     display: flex;
-    gap: 10px;
+    align-items: center; 
+    flex-shrink: 0;
+    gap: 2px;
     font-size: 13px;
     font-family: 'Oxygen Mono', monospace;
     padding: 5px 5px;
@@ -166,6 +180,9 @@ a{
     font-size: 20px;
     font-family: 'Oxygen Mono', monospace;
     padding: 10px 5px;}
+.tituloTextFiltro{
+    margin: 10px 5px;
+}
 
 /* CSS para TAJETERO - Final -------------------------------------------- */
 
