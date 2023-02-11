@@ -42,21 +42,21 @@
                 <span>Galería</span>
             </div>
             <hr>
-            <div class = 'tituloTextConten'>Conseptos de desarrollo web</div>
+            <div class = 'tituloTextConten'>Conceptos y tecnologías del desarrollo web</div>
             <!-- <hr> -->
         </div>
         <div class="contenBody">
             <div class = 'colFiltro'>
                 <li class="tituloTextFiltro">Temáticas
-                    <button id="backend-btn" class="btn">Back-End</button>
-                    <button id="frontend-btn" class="btn">Front-End</button>
-                    <button id="all-btn" class="btn">All</button>
+                    <button class="filter-btn" data-category="backend">Back-End</button>
+                    <button class="filter-btn" data-category="frontend">Front-End</button>
+                    <button class="filter-btn" data-category="all">All</button>
                 </li>
                 
             </div>
             <div class = 'contenCards'>
 
-                <div class = 'card' data-category="frontend">
+                <div class = 'card' data-categories='["frontend"]'>
                     <a href="pages/html.html">
                         <div class = 'descrip descrip-bk1'></div>
                         <div class = 'tituloCard'>
@@ -66,7 +66,7 @@
                     </a>
                 </div>
 
-                <div class = 'card' data-category="frontend">
+                <div class = 'card' data-categories='["frontend"]'>
                     <a href="pages/css.html">
                         <div class = 'descrip descrip-bk2'></div>
                         <div class = 'tituloCard'>
@@ -76,7 +76,7 @@
                     </a>
                 </div>
 
-                <div class = 'card' data-category="all">
+                <div class = 'card' data-categories='["frontend","backend"]'>
                     <a href="pages/des-web.html">
                         <div class = 'descrip descrip-bk3'></div>
                         <div class = 'tituloCard'>
@@ -86,7 +86,7 @@
                     </a>
                 </div>
 
-                <div class = 'card' data-category="all">
+                <div class = 'card' data-categories='["frontend","backend"]'>
                     <a href="pages/js.html">
                         <div class = 'descrip descrip-bk4'></div>
                         <div class = 'tituloCard'>
@@ -96,7 +96,7 @@
                     </a>
                 </div>
 
-                <div class = 'card' data-category="backend">
+                <div class = 'card' data-categories='["backend"]'>
                     <a href="pages/nodejs.html">
                         <div class = 'descrip descrip-bk5'></div>
                         <div class = 'tituloCard'>
@@ -106,7 +106,7 @@
                     </a>
                 </div>
 
-                <div class = 'card' data-category="backend">
+                <div class = 'card' data-categories='["backend"]'>
                     <a href="pages/py.html">
                         <div class = 'descrip descrip-bk6'></div>
                         <div class = 'tituloCard'>

@@ -23,7 +23,6 @@ a{
 .tituloPrincipal{
     padding: 0px 3% 0px 3%;
     background-color: #ffbea6;
-    /*font-family: 'Nabla', cursive;*/
     font-family: 'Nabla', cursive;
     font-palette: --myPalette;
     font-size: 55px;
@@ -32,10 +31,6 @@ a{
 .nav{
     padding: 15px;
     background-color:darkslategrey;
-    /*margin: 3%;
-    border-radius: 5px;
-    border: 0.5px solid;
-    box-shadow: 1px 1px 5px 1px #888888;*/
 }
 .nav a{
     color: white;
@@ -200,23 +195,22 @@ li::marker{
     content: "| ";
     margin-right: 5px;
 }
-.btn{
+.filter-btn{
     font-size: 14px;
     text-align: start;
     color: #666666;
     font-family: 'Oxygen Mono', monospace;
     border: none;
     border-radius: 5px;
-    margin: 2px 0px 2px 17px;
+    margin: 2px 0px 2px 18px;
     padding: 3px 10px;
     cursor: pointer;
     background-size: 100px;
     background-color:#f8f8f800;
 }
-.btn:hover{
+.filter-btn:hover{
     font-weight: bold;
 }
-
 /* CSS para TAJETERO - Final -------------------------------------------- */
 
 
