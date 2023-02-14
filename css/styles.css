@@ -16,7 +16,7 @@ a{
     text-transform: none;
 }
 .tituloConten hr{
-    margin: 0px 100px 0px 0px;
+    margin: 0px;
 }
 
 /* Cambios en clases */
@@ -72,11 +72,12 @@ a{
     75%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
     85%{rotate: 10deg;}
 }
-
 .tituloSaludo{
     display: flex;
 }
-
+.active{
+    font-weight: bold;
+}
 
 
 /* CSS para CARDS - Inicio -------------------------------------------- */

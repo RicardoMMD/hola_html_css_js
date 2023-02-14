@@ -21,14 +21,18 @@ function filterCards(selectedCategories) {
             card.style.display = "none";
         }
     }
+
+
+
 }
 
 // select filters
-let filters = document.querySelectorAll(".filter-btn");
+const filters = document.querySelectorAll(".filter-btn");
 
 // add click event listeners to filters
 for (let filter of filters) {
   filter.addEventListener("click", function() {
+    
     // remove the "active" class from all filters
     for (let f of filters) {
       f.classList.remove("active");
