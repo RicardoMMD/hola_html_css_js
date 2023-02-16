@@ -1,8 +1,5 @@
 
 
-
-let activeBtn = null;
-
 function filterCards(selectedCategories) {
     // select cards
     const cards = document.querySelectorAll(".card");
@@ -21,9 +18,6 @@ function filterCards(selectedCategories) {
             card.style.display = "none";
         }
     }
-
-
-
 }
 
 // select filters
