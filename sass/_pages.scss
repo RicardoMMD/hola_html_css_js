@@ -1,0 +1,36 @@
+
+.conten-consept{
+    margin: 5vh 15vw;
+    text-align: justify;
+    font-family: 'Oxygen Mono', monospace;
+}
+.migas{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    font-weight: bold;
+    gap: 8px;
+    text-decoration: none;
+    left: 3% ;
+}
+.migas:hover{
+    background-color: #d8d8d8;
+}
+
+.contenedorCajitas{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+.cuadrito{
+    padding: 25px;
+    margin: 2%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgb(0, 174, 174);
+    background-color: coral;
+}

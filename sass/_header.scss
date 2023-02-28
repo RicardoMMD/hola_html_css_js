@@ -1,0 +1,47 @@
+.tituloPrincipal{
+    padding: 0px 3% 0px 3%;
+    background-color: rgb(255, 200, 194);
+    font-family: 'Nabla', cursive;
+    font-palette: --myPalette;
+    font-size: 45px;
+    margin: 0px;
+}
+.nav{
+    padding: 5px 3%;
+    background-color:rgb(37, 105, 144);
+    a{
+        color: white;
+        padding: 0px 0%;
+        font-family: 'Oxygen Mono', monospace;    
+        font-size: 20px;
+        text-decoration: none;
+        word-spacing: 0px;
+        letter-spacing: 1px;
+        gap: 10px;
+    }
+    a:hover{
+        /*background-color: rgb(68, 149, 196);*/
+        font-weight: 600;
+        color: rgb(56, 56, 56);
+        border-radius: 5px;
+        font-weight: bold;
+    }
+}
+.bkgn-sub{
+    display: block; 
+    object-fit: cover; 
+    border-radius: 0px; 
+    width: 100%; 
+    height: 18vh; 
+    opacity: 1; 
+    object-position: center 50%;
+}
+.bkgn-sub-principal{
+    display: block; 
+    object-fit: cover; 
+    border-radius: 0px; 
+    width: 100%; 
+    height: 18vh; 
+    opacity: 1; 
+    object-position: 25% 55%;
+}

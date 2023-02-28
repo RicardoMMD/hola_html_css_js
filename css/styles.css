@@ -1,275 +1,348 @@
-/*Importamos fuentes de Google*/
-@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Oxygen+Mono&display=swap');
-@font-palette-values --myPalette {
-    font-family: "Nabla";
-    base-palette: 3;
-    override-colors: 6 #fff;
-  };
-
-  /* Cambios en elementos/etiquetas HTML */
-body{
-    background-color:#FBFBF7;
-    margin: 0%;
-}
-a{
-    text-decoration: none;
-    text-transform: none;
-}
-.tituloConten hr{
-    margin: 0px;
+/* Cambios en elementos/etiquetas HTML */
+@import url("https://fonts.googleapis.com/css2?family=Nabla&family=Oxygen+Mono&display=swap");
+.tituloPrincipal {
+  padding: 0px 3% 0px 3%;
+  background-color: rgb(255, 200, 194);
+  font-family: "Nabla", cursive;
+  font-palette: --myPalette;
+  font-size: 45px;
+  margin: 0px;
 }
 
-/* Cambios en clases */
-.tituloPrincipal{
-    padding: 0px 3% 0px 3%;
-    background-color: rgb(255, 200, 194);
-    font-family: 'Nabla', cursive;
-    font-palette: --myPalette;
-    font-size: 45px;
-    margin: 0px;
+.nav {
+  padding: 5px 3%;
+  background-color: rgb(37, 105, 144);
 }
-.nav{
-    padding: 5px 3%;
-    background-color:rgb(37, 105, 144);
+.nav a {
+  color: white;
+  padding: 0px 0%;
+  font-family: "Oxygen Mono", monospace;
+  font-size: 20px;
+  text-decoration: none;
+  word-spacing: 0px;
+  letter-spacing: 1px;
+  gap: 10px;
 }
-.nav a{
-    color: white;
-    padding: 0px 0%;
-    font-family: 'Oxygen Mono', monospace;    
-    font-size: 20px;
-    text-decoration: none;
-    word-spacing: 0px;
-    letter-spacing: 1px;
-    gap: 10px;
-}
-.nav a:hover{
-    /*background-color: rgb(68, 149, 196);*/
-    font-weight: 600;
-    color: rgb(56, 56, 56);
-    border-radius: 5px;
-    font-weight: bold;
-}
-.bkgn-sub{
-    display: block; 
-    object-fit: cover; 
-    border-radius: 0px; 
-    width: 100%; 
-    height: 18vh; 
-    opacity: 1; 
-    object-position: center 50%;
-}
-.bkgn-sub-principal{
-    display: block; 
-    object-fit: cover; 
-    border-radius: 0px; 
-    width: 100%; 
-    height: 18vh; 
-    opacity: 1; 
-    object-position: 25% 55%;
+.nav a:hover {
+  /*background-color: rgb(68, 149, 196);*/
+  font-weight: 600;
+  color: rgb(56, 56, 56);
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.saludo{
-    font-size: 40px;
-    margin: 10px 5px;
-}
-.saludo:hover{animation: saludando 1s;}
-@keyframes saludando {
-    10%{font-size: 45px;}
-    25%{rotate: 15deg;font-size: 45px;transform: translateY(-10px);}
-    35%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
-    45%{rotate: 10deg;font-size: 45px;transform: translateY(-10px);}
-    55%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
-    65%{rotate: 10deg;font-size: 45px;transform: translateY(-10px);}
-    75%{rotate: -10deg;font-size: 45px;transform: translateY(-10px);}
-    85%{rotate: 10deg;}
-}
-.tituloSaludo{
-    display: flex;
-}
-.active{
-    font-weight: bold;
+.bkgn-sub {
+  display: block;
+  object-fit: cover;
+  border-radius: 0px;
+  width: 100%;
+  height: 18vh;
+  opacity: 1;
+  object-position: center 50%;
 }
 
+.bkgn-sub-principal {
+  display: block;
+  object-fit: cover;
+  border-radius: 0px;
+  width: 100%;
+  height: 18vh;
+  opacity: 1;
+  object-position: 25% 55%;
+}
 
-/* CSS para CARDS - Inicio -------------------------------------------- */
-.card{
-    width: 280px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #eaeaea;
-    border: 0.3px solid rgb(188, 188, 188);
-    box-shadow: 2px 2px 5px 2px #d8d8d8;
+.card {
+  width: 280px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #eaeaea;
+  border: 0.3px solid rgb(188, 188, 188);
+  box-shadow: 2px 2px 5px 2px #d8d8d8;
 }
-.descrip{
-    font-family: 'IBM Plex Sans';
-    text-align: justify;
-    font-size: 12px;
-    margin: 3px;
-    padding: 4px;
-    overflow: clip;
-    background-color: rgb(253, 253, 253);
-    height: 120px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 5px 5px 0px 0px ;
-}
-.descrip-bk1{
-    background-image: url("https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-}
-.descrip-bk2{
-    background-image: url("https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
-}
-.descrip-bk3{
-    background-image: url("https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80");
-}
-.descrip-bk4{
-    background-image: url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80");
-}
-.descrip-bk5{
-    background-image: url("https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
-}
-.descrip-bk6{
-    background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
-}
-.tituloCard{
-    display: flex;
-    align-items: center;
-    background-color: white;
-    min-height: 50px;
-    padding-left: 3%;
-    border-radius: 0px 0px 5px 5px;
-}
-.tituloCard:hover{
-    background-color: #F8F8F8;
-}
-.tituloText{
-    margin: 0px;
-    text-align: start;
-    font-size: 14px;
-    /*font-weight: bold;*/
-    font-family: 'Oxygen Mono', monospace;
-    margin-left: 5px;
-}
-/* CSS para CARDS - Final -------------------------------------------- */
 
+.descrip {
+  font-family: "IBM Plex Sans";
+  text-align: justify;
+  font-size: 12px;
+  margin: 3px;
+  padding: 4px;
+  overflow: clip;
+  background-color: rgb(253, 253, 253);
+  height: 120px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0px 0px;
+}
 
-/* CSS para TAJETERO - Inicio ------------------------------------------- */
-.contenBody{
-    display: grid;
-    grid-template-columns: 180px auto;
+.descrip-bk1 {
+  background-image: url("https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
 }
-.colFiltro{
-    /*background-color: beige;*/
-    display: flex;
-    flex-direction: column;
+
+.descrip-bk2 {
+  background-image: url("https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
 }
-.tarjetero{
-    /*background-color: #ffbea6;*/
+
+.descrip-bk3 {
+  background-image: url("https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80");
+}
+
+.descrip-bk4 {
+  background-image: url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80");
+}
+
+.descrip-bk5 {
+  background-image: url("https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+}
+
+.descrip-bk6 {
+  background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+}
+
+.tituloCard {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  min-height: 50px;
+  padding-left: 3%;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.tituloCard:hover {
+  background-color: #F8F8F8;
+}
+
+.tituloText {
+  margin: 0px;
+  text-align: start;
+  font-size: 14px;
+  color: black;
+  /*font-weight: bold;*/
+  font-family: "Oxygen Mono", monospace;
+  margin-left: 5px;
+}
+
+.contenBody {
+  display: grid;
+  grid-template-columns: 180px auto;
+}
+
+.colFiltro {
+  /*background-color: beige;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.descripcion {
+  /*background-color: #ffbea6;*/
+  margin: 1% 1%;
+  padding: 5px;
+  font-family: "Oxygen Mono", monospace;
+}
+
+.tarjetero {
+  /*background-color: #ffbea6;*/
+  margin: 1% 1%;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Oxygen Mono", monospace;
+}
+
+.tituloConten {
+  /*background-color: aquamarine;*/
+  min-height: 35px;
+}
+
+.contenCards {
+  display: grid;
+  min-height: 35px;
+  /*background-color:cadetblue;*/
+  padding: 5px;
+  width: auto;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+
+.vistaConten {
+  /*background-color:rgb(97, 61, 255);*/
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2px;
+  font-size: 13px;
+  font-family: "Oxygen Mono", monospace;
+  padding: 5px 5px;
+}
+
+.tituloTextConten {
+  /*background-color:rgb(255, 61, 249);*/
+  font-size: 20px;
+  font-family: "Oxygen Mono", monospace;
+  font-weight: bold;
+  padding: 10px 5px;
+}
+
+.tituloTextFiltro {
+  font-size: 16px;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+li::marker {
+  font-size: 23px;
+  content: "| ";
+  margin-right: 5px;
+}
+
+.filter-btn {
+  font-size: 14px;
+  text-align: start;
+  color: #666666;
+  font-family: "Oxygen Mono", monospace;
+  border: none;
+  border-radius: 5px;
+  margin: 2px 0px 2px 18px;
+  padding: 3px 10px;
+  cursor: pointer;
+  background-size: 100px;
+  background-color: rgba(248, 248, 248, 0);
+}
+
+.filter-btn:hover {
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .tarjetero {
     margin: 1% 1%;
-    font-family: 'Oxygen Mono', monospace;
+  }
+  .descripcion {
+    margin: 1% 1%;
+  }
 }
-.tituloConten{
-    /*background-color: aquamarine;*/
-    min-height: 35px;
+@media (min-width: 768px) {
+  .tarjetero {
+    margin: 1% 5%;
+  }
+  .descripcion {
+    margin: 1% 5%;
+  }
 }
-.contenCards{
-    display: grid;
-    min-height: 35px;
-    /*background-color:cadetblue;*/
-    padding: 5px;
-    width: auto;
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+@media (min-width: 1024px) {
+  .tarjetero {
+    margin: 1% 10%;
+  }
+  .descripcion {
+    margin: 1% 10%;
+  }
 }
-.vistaConten{
-    /*background-color:rgb(97, 61, 255);*/
-    display: flex;
-    align-items: center; 
-    flex-shrink: 0;
-    gap: 2px;
-    font-size: 13px;
-    font-family: 'Oxygen Mono', monospace;
-    padding: 5px 5px;
-}
-.tituloTextConten{
-    /*background-color:rgb(255, 61, 249);*/
-    font-size: 20px;
-    font-family: 'Oxygen Mono', monospace;
-    font-weight: bold;
-    padding: 10px 5px;}
-.tituloTextFiltro{
-    font-size: 16px;
-    padding: 10px 0px;
-    font-weight: bold;
-}
-li::marker{
-    font-size: 23px;
-    content: "| ";
-    margin-right: 5px;
-}
-.filter-btn{
-    font-size: 14px;
-    text-align: start;
-    color: #666666;
-    font-family: 'Oxygen Mono', monospace;
-    border: none;
-    border-radius: 5px;
-    margin: 2px 0px 2px 18px;
-    padding: 3px 10px;
-    cursor: pointer;
-    background-size: 100px;
-    background-color:#f8f8f800;
-}
-.filter-btn:hover{
-    font-weight: bold;
-}
-/* CSS para TAJETERO - Final -------------------------------------------- */
-
-
-.conten-consept{
-    margin: 5vh 15vw;
-    text-align: justify;
-    font-family: 'Oxygen Mono', monospace;
+.conten-consept {
+  margin: 5vh 15vw;
+  text-align: justify;
+  font-family: "Oxygen Mono", monospace;
 }
 
-.migas{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    color: black;
-    /*width: 50px;*/
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #eeeeee;
-    font-weight: bold;
-    gap: 8px;
-    text-decoration: none;
-    left: 3% ;
-}
-.migas:hover{
-    background-color: #d8d8d8;
+.migas {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  font-weight: bold;
+  gap: 8px;
+  text-decoration: none;
+  left: 3%;
 }
 
-.contenedorCajitas{
-    background-color: aqua;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2%;
-}
-.cuadrito{
-    padding: 25px;
-    margin: 2%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 2px rgb(0, 174, 174);
-    background-color: coral;
+.migas:hover {
+  background-color: #d8d8d8;
 }
 
-
-
-
-
-@media(min-width: 1024px){
-    .tarjetero{
-        margin: 1% 10%;
-    }
+.contenedorCajitas {
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
 }
+
+.cuadrito {
+  padding: 25px;
+  margin: 2%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 2px rgb(0, 174, 174);
+  background-color: coral;
+}
+
+body {
+  background-color: #FBFBF7;
+  margin: 0%;
+}
+body a {
+  text-decoration: none;
+  text-transform: none;
+}
+
+.saludo {
+  font-size: 40px;
+  margin: 10px 5px;
+}
+
+.saludo:hover {
+  animation: saludando 1s;
+}
+
+@keyframes saludando {
+  10% {
+    font-size: 45px;
+  }
+  25% {
+    rotate: 15deg;
+    font-size: 45px;
+    transform: translateY(-10px);
+  }
+  35% {
+    rotate: -10deg;
+    font-size: 45px;
+    transform: translateY(-10px);
+  }
+  45% {
+    rotate: 10deg;
+    font-size: 45px;
+    transform: translateY(-10px);
+  }
+  55% {
+    rotate: -10deg;
+    font-size: 45px;
+    transform: translateY(-10px);
+  }
+  65% {
+    rotate: 10deg;
+    font-size: 45px;
+    transform: translateY(-10px);
+  }
+  75% {
+    rotate: -10deg;
+    font-size: 45px;
+    transform: translateY(-10px);
+  }
+  85% {
+    rotate: 10deg;
+  }
+}
+.tituloSaludo {
+  display: flex;
+}
+
+.active {
+  font-weight: bold;
+}
+
+/*Importamos fuentes de Google*/
+@font-palette-values --myPalette {
+  font-family: "Nabla";
+  base-palette: 3;
+  override-colors: 6 #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */
