@@ -4,6 +4,17 @@
     text-align: justify;
     font-family: 'Oxygen Mono', monospace;
 }
+
+.bkgn-sub-peges{
+    display: block; 
+    object-fit: cover; 
+    border-radius: 0px; 
+    width: 100%; 
+    height: 18vh; 
+    opacity: 1; 
+    .bkgn-sub-peges-1{object-position: 25% 55%;}
+}
+
 .migas{
     position: absolute;
     display: flex;
@@ -21,16 +32,5 @@
     background-color: #d8d8d8;
 }
 
-.contenedorCajitas{
-    background-color: aqua;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2%;
-}
-.cuadrito{
-    padding: 25px;
-    margin: 2%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 2px rgb(0, 174, 174);
-    background-color: coral;
-}
+
+

@@ -4,11 +4,13 @@ $color-bk:#FBFBF7;
 @use 'cards';
 @use 'tarjetero';
 @use 'pages';
+@use 'experiemntos';
 
 /* Cambios en elementos/etiquetas HTML */
 body{
     background-color:$color-bk;
-    margin: 0%;
+    margin: 0% ;
+    font-family: 'Oxygen Mono', monospace;
     a{
         text-decoration: none;
         text-transform: none;
@@ -36,6 +38,25 @@ body{
     font-weight: bold;
 }
 
+
+
+.contenedor-principal{
+    margin: 1% 1%;
+    li::marker{
+        font-size: 23px;
+        content: "| ";
+        margin-right: 5px;
+    }
+}
+@media(min-width: 576px){
+    .contenedor-principal{margin: 1% 1%;}
+}
+@media(min-width: 768px){
+    .contenedor-principal{margin: 1% 5%;}
+}
+@media(min-width: 1024px){
+    .contenedor-principal{margin: 1% 10%;}
+}
 
 
 
