@@ -1,8 +1,13 @@
+$fuente-principal:'Oxygen Mono', monospace;
+
+
+
+
 .tarjetero{
     /*background-color: #ffbea6;*/
     padding: 5px;
     border-radius: 5px;
-    font-family: 'Oxygen Mono', monospace;
+    font-family: $fuente-principal;
 }
 
 .contenBody{
@@ -13,12 +18,17 @@
     /*background-color: beige;*/
     display: flex;
     flex-direction: column;
+    li::marker{
+        font-size: 23px;
+        content: "| ";
+        margin-right: 5px;
+    }
 }
 .descripcion{
     /*background-color: #ffbea6;*/
     margin: 1% 1%;
     padding: 5px;
-    font-family: 'Oxygen Mono', monospace;
+    font-family: $fuente-principal;
 }
 
 .tituloConten{
@@ -40,13 +50,13 @@
     flex-shrink: 0;
     gap: 2px;
     font-size: 13px;
-    font-family: 'Oxygen Mono', monospace;
+    font-family: $fuente-principal;
     padding: 5px 5px;
 }
 .tituloTextConten{
     /*background-color:rgb(255, 61, 249);*/
     font-size: 20px;
-    font-family: 'Oxygen Mono', monospace;
+    font-family: $fuente-principal;
     font-weight: bold;
     padding: 10px 5px;}
 .tituloTextFiltro{
@@ -73,11 +83,16 @@
 }
 
 @media(min-width: 375px){
-    
+    .tituloTextFiltro{display: flex;}
+    .contenBody{
+        grid-template-columns:  1fr;
+    }
 }
 @media(min-width: 768px){
-    
+    .contenBody{grid-template-columns: 150px auto;}
+    .tituloTextFiltro{display: list-item;}
 }
 @media(min-width: 1024px){
-    
+    .contenBody{grid-template-columns: 180px auto;}
+    .tituloTextFiltro{display:list-item;}
 }

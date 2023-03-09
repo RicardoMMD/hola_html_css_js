@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rampart+One&family=Smokum&display=swap');
+
+@mixin forma-cuadrito($color-bk:coral,$color:black, $font-family:monospace, $border-radius:5px){
+    background-color : $color-bk;
+    color            : $color;
+    font-family      : $font-family;
+    border-radius    : $border-radius;
+}
+
+
+
 .contenedorCajitas{
-    background-color: aqua;
+    background-color: rgb(235, 235, 235);
     display: flex;
     flex-wrap: wrap;
     padding: 2%;
@@ -7,9 +18,16 @@
 .cuadrito{
     padding: 25px;
     margin: 2%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 2px rgb(0, 174, 174);
-    background-color: coral;
+    box-shadow: 2px 2px 5px 2px #b9b9b9;
+}
+.sty-1{
+    @include forma-cuadrito(#003777, #0077ff, 'Press Start 2P', 10px);
+}
+.sty-2{
+    @include forma-cuadrito(#00bf92, #000000, 'Rampart One', 5px);
+}
+.sty-3{
+    @include forma-cuadrito(#b900e3, #000000, 'Smokum', 15px);
 }
 
 

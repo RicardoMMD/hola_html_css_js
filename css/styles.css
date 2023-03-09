@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rampart+One&family=Smokum&display=swap");
 /* Cambios en elementos/etiquetas HTML */
 @import url("https://fonts.googleapis.com/css2?family=Nabla&family=Oxygen+Mono&display=swap");
 .tituloPrincipal {
@@ -46,7 +47,7 @@
   object-fit: cover;
   border-radius: 0px;
   width: 100%;
-  height: 18vh;
+  height: 22vh;
   opacity: 1;
   object-position: 25% 55%;
 }
@@ -75,6 +76,29 @@
   border-radius: 5px 5px 0px 0px;
 }
 
+.tituloCard {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  min-height: 50px;
+  padding-left: 3%;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.tituloCard:hover {
+  background-color: #F8F8F8;
+}
+
+.tituloText {
+  margin: 0px;
+  text-align: start;
+  font-size: 14px;
+  color: black;
+  /*font-weight: bold;*/
+  font-family: "Oxygen Mono", monospace;
+  margin-left: 5px;
+}
+
 .descrip-bk1 {
   background-image: url("https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
 }
@@ -99,29 +123,6 @@
   background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
 }
 
-.tituloCard {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  min-height: 50px;
-  padding-left: 3%;
-  border-radius: 0px 0px 5px 5px;
-}
-
-.tituloCard:hover {
-  background-color: #F8F8F8;
-}
-
-.tituloText {
-  margin: 0px;
-  text-align: start;
-  font-size: 14px;
-  color: black;
-  /*font-weight: bold;*/
-  font-family: "Oxygen Mono", monospace;
-  margin-left: 5px;
-}
-
 .tarjetero {
   /*background-color: #ffbea6;*/
   padding: 5px;
@@ -138,6 +139,11 @@
   /*background-color: beige;*/
   display: flex;
   flex-direction: column;
+}
+.colFiltro li::marker {
+  font-size: 23px;
+  content: "| ";
+  margin-right: 5px;
 }
 
 .descripcion {
@@ -204,6 +210,30 @@
   font-weight: bold;
 }
 
+@media (min-width: 375px) {
+  .tituloTextFiltro {
+    display: flex;
+  }
+  .contenBody {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .contenBody {
+    grid-template-columns: 150px auto;
+  }
+  .tituloTextFiltro {
+    display: list-item;
+  }
+}
+@media (min-width: 1024px) {
+  .contenBody {
+    grid-template-columns: 180px auto;
+  }
+  .tituloTextFiltro {
+    display: list-item;
+  }
+}
 .conten-consept {
   margin: 5vh 15vw;
   text-align: justify;
@@ -241,7 +271,7 @@
 }
 
 .contenedorCajitas {
-  background-color: aqua;
+  background-color: rgb(235, 235, 235);
   display: flex;
   flex-wrap: wrap;
   padding: 2%;
@@ -250,9 +280,28 @@
 .cuadrito {
   padding: 25px;
   margin: 2%;
+  box-shadow: 2px 2px 5px 2px #b9b9b9;
+}
+
+.sty-1 {
+  background-color: #003777;
+  color: #0077ff;
+  font-family: "Press Start 2P";
+  border-radius: 10px;
+}
+
+.sty-2 {
+  background-color: #00bf92;
+  color: #000000;
+  font-family: "Rampart One";
   border-radius: 5px;
-  box-shadow: 2px 2px 5px 2px rgb(0, 174, 174);
-  background-color: coral;
+}
+
+.sty-3 {
+  background-color: #b900e3;
+  color: #000000;
+  font-family: "Smokum";
+  border-radius: 15px;
 }
 
 ul {
@@ -311,6 +360,126 @@ ul li:nth-child(3) a:before {
 }
 ul li:nth-child(4) a:before {
   background: #dd4b39;
+}
+
+.conten-cards {
+  display: grid;
+  min-height: 35px;
+  /*background-color:cadetblue;*/
+  padding: 5px;
+  width: auto;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.team-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  margin: 10px;
+  border-radius: 7px;
+  background-color: #e4e4e4;
+  padding: 10px;
+  border: solid 2px #dedddd;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.team-card p {
+  margin: 5px;
+  padding: 0%;
+}
+.team-card ul {
+  display: flex;
+  margin: 10px;
+  padding: 0px;
+}
+.team-card ul li {
+  list-style: none;
+}
+.team-card ul li a {
+  width: 35px;
+  height: 35px;
+  background-color: #d0d0d0;
+  text-align: center;
+  line-height: 10px;
+  font-size: 20px;
+  margin: 0 5px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 0px solid #858585;
+  z-index: 1;
+}
+.team-card ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+.team-card ul li a i {
+  margin-top: 8px;
+}
+.team-card ul li a:hover .icon {
+  color: #ffffff;
+  transform: rotateY(360deg);
+}
+.team-card ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+.team-card ul li a:hover:before {
+  top: 0;
+}
+.team-card ul li:nth-child(1) a:before {
+  background: #3b5999;
+}
+.team-card ul li:nth-child(2) a:before {
+  background: #55acee;
+}
+.team-card ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+.team-card .card-img {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+  object-position: 0% 90%;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 60%);
+}
+
+.team-card .profile-img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -10rem;
+  z-index: 999;
+  border: 7px solid #e4e4e4;
+}
+
+.name-profile {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.email {
+  font-size: 10px;
+  font-style: italic;
+  color: rgb(48, 48, 48);
+}
+
+.about {
+  font-size: 12px;
 }
 
 body {
@@ -380,11 +549,6 @@ body a {
 
 .contenedor-principal {
   margin: 1% 1%;
-}
-.contenedor-principal li::marker {
-  font-size: 23px;
-  content: "| ";
-  margin-right: 5px;
 }
 
 @media (min-width: 576px) {

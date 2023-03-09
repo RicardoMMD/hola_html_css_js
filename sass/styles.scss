@@ -5,6 +5,7 @@ $color-bk:#FBFBF7;
 @use 'tarjetero';
 @use 'pages';
 @use 'experiemntos';
+@use 'team';
 
 /* Cambios en elementos/etiquetas HTML */
 body{
@@ -42,11 +43,7 @@ body{
 
 .contenedor-principal{
     margin: 1% 1%;
-    li::marker{
-        font-size: 23px;
-        content: "| ";
-        margin-right: 5px;
-    }
+
 }
 @media(min-width: 576px){
     .contenedor-principal{margin: 1% 1%;}
@@ -71,6 +68,7 @@ body{
 
 /*Importamos fuentes de Google*/
 @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Oxygen+Mono&display=swap');
+
 @font-palette-values --myPalette {
     font-family: "Nabla";
     base-palette: 3;
