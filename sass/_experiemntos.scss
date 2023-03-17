@@ -6,6 +6,60 @@
     font-family      : $font-family;
     border-radius    : $border-radius;
 }
+ul {
+    display: flex;
+    margin: 10px;
+    padding: 0px;
+    li {
+        list-style: none;
+        a {
+            width: 35px;
+            height: 35px;
+            background-color: #d0d0d0;
+            text-align: center;
+            line-height: 10px;
+            font-size: 20px;
+            margin: 0 5px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 0px solid #858585;
+            z-index: 1;
+            .icon {
+                position: relative;
+                color: #262626;
+                transition: .5s;
+                z-index: 3;
+            }
+            i{
+                margin-top: 8px;
+            }
+        }
+        a:hover .icon {
+            color: #ffffff;
+            transform: rotateY(360deg);
+        }
+        a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+        }
+        a:hover:before {
+            top: 0;
+        }
+    }
+    li:nth-child(1) a:before{background: #3b5999;}
+    li:nth-child(2) a:before{background: #55acee;}
+    li:nth-child(3) a:before {background: #0077b5;}
+    
+}
 
 
 
@@ -31,52 +85,4 @@
 }
 
 
-ul {
-    display: flex;
-    li {
-        list-style: none;
-        a {
-            width: 80px;
-            height: 80px;
-            background-color: #d0d0d0;
-            text-align: center;
-            line-height: 80px;
-            font-size: 35px;
-            margin: 0 10px;
-            display: block;
-            border-radius: 50%;
-            position: relative;
-            overflow: hidden;
-            border: 3px solid #858585;
-            z-index: 1;
-            .icon {
-                position: relative;
-                color: #262626;
-                transition: .5s;
-                z-index: 3;
-            }
-        }
-        a:hover .icon {
-            color: #ffffff;
-            transform: rotateY(360deg);
-        }
-        a:before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #f00;
-            transition: .5s;
-            z-index: 2;
-        }
-        a:hover:before {
-            top: 0;
-        }
-    }
-    li:nth-child(1) a:before{background: #3b5999;}
-    li:nth-child(2) a:before{background: #55acee;}
-    li:nth-child(3) a:before {background: #0077b5;}
-    li:nth-child(4) a:before {background: #dd4b39;}
-}
+

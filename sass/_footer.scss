@@ -1,0 +1,74 @@
+$fuente-principal:'Oxygen Mono', monospace;
+
+footer{
+    background-color: #256990;
+    width: 100%;
+    min-height: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        margin: 10px;
+        color: azure; 
+        font-family: $fuente-principal;
+        font-weight: bold;
+        background-color: #83b6d3;
+        padding: 5px 20px;
+        border-radius: 5px;
+    }
+    .fa-heart{color: rgb(255, 200, 194);}
+    ul {
+        display: flex;
+        position: absolute;
+        margin: 5px 15px;
+        right: 20px;
+        li {
+            list-style: none;
+            a {
+                width: 32px;
+                height: 32px;
+                background-color: #f2f2f2;
+                text-align: center;
+                line-height: 38px;
+                font-size: 20px;
+                margin: 0px 0px;
+                display: block;
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+                /*border: 0px solid #858585;*/
+                z-index: 1;
+                .icon {
+                    position: relative;
+                    color: #262626;
+                    transition: .5s;
+                    z-index: 3;
+                }
+            }
+            a:hover .icon {
+                color: #ffffff;
+                transform: rotateY(360deg);
+            }
+            a:before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #f00;
+                transition: .5s;
+                z-index: 2;
+            }
+            a:hover:before {
+                top: 0;
+            }
+        }
+        #face a:before{background: #3b5999;}
+        #twit a:before{background: #55acee;}
+        #inkedin a:before {background: #0077b5;}
+        #goog a:before {background: #dd4b39;}
+    }
+}
+.heart{
+}
