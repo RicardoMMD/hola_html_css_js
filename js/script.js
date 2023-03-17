@@ -43,3 +43,36 @@ for (let filter of filters) {
   });
 }
 
+
+
+
+
+
+
+// Controles del carrusel -------------------------------------------
+
+// Obtenemos elementos por sus clases
+const videos = [...document.querySelectorAll(".video_wrapper")];
+const arrowAfter = document.querySelector('#after');
+const arrowBefore = document.querySelector('#before');
+let valor;
+
+
+
+arrowAfter.addEventListener('click',()=>changePosition(1));
+arrowBefore.addEventListener('click',()=>changePosition(-1));
+
+function changePosition(cambio){
+  let currentElement = Number(document.querySelector('.video_wrapper--show').dataset.id);
+
+  valor = currentElement;
+  valor += cambio;
+
+  if(valor === 0 || valor == videos.length+1){
+    valor = valor === 0 ? videos.length : 1;
+  }
+
+  videos[currentElement-1].classList.toggle('video_wrapper--show');
+  videos[valor-1].classList.toggle('video_wrapper--show');
+
+};
