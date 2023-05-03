@@ -37,7 +37,7 @@ function filterCards(selectedCategories) {
 // Seleccionamos los objetos de clase filter-btn
 const filters = document.querySelectorAll(".filter-btn");
 
-// add click event listeners to filters
+// agregar detectores de eventos de clic a los filtros
 for (let filter of filters) {
   filter.addEventListener("click", () => {
     
@@ -49,10 +49,10 @@ for (let filter of filters) {
     // añadimo la calse "active" al boton seleccionado
     this.classList.add("active");
 
-    // get the selected categories
+    // obtener las categorías seleccionadas
     let selectedCategories = [...filters].filter(f => f.classList.contains("active")).map(f => f.dataset.category);
 
-    // filter the cards
+    // filtrar las cartas
     filterCards(selectedCategories);
   });
 }
