@@ -110,10 +110,18 @@
             <br>
             <!-- Experimento 4 -->
             <section>
-                
                 <h3>Recuadro para practicar eventos con el mouse</h3>
+                <p>Haga clic en el recuadro para comenzar el evento</p>
                 <!-- Eventos con el mouse -->
                 <div id="caja"></div>
+                <script>
+                    // Seleccionamos el elemento HTML sobre el que se accionará
+                    const caja = document.getElementById("caja");
+                    caja.addEventListener('click',()=>{
+                        console.log('Se dio clic en la caja')
+                        eventoMouse()
+                    })
+                </script>
             </section>
 
             <!-- Experimento 5 -->
@@ -154,6 +162,7 @@
 
             <!-- Experimento 7 -->
             <h2>Generador de números aleatorios</h2>
+            <p>Genera números aleatorios entre el 1 y el 50</p>
             <button id="rdom_btn">Ejecutar</button>
             <div id="result_num_rdom"></div>
             <script>
@@ -162,6 +171,11 @@
                     num_aleatorios()
                 })
             </script>
+
+
+
+
+
 
     </section>
 

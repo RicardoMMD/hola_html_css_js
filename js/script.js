@@ -10,8 +10,6 @@ class items_tec{
   }
 }
 
-
-
 function filterCards(selectedCategories) {
     // Enlistamos los elementos de clase "card"
     const cards = document.querySelectorAll(".card");
@@ -39,22 +37,22 @@ const filters = document.querySelectorAll(".filter-btn");
 
 // agregar detectores de eventos de clic a los filtros
 for (let filter of filters) {
-  filter.addEventListener("click", () => {
-    
-    // remover la clase "active" de todos los botones
-    for (let f of filters) {
-      f.classList.remove("active");
-    }
+    filter.addEventListener("click", () => {
+        
+        // remover la clase "active" de todos los botones
+        for (let f of filters) {
+        f.classList.remove("active");
+        }
 
-    // añadimo la calse "active" al boton seleccionado
-    this.classList.add("active");
+        // añadimo la calse "active" al boton seleccionado
+        filter.classList.add("active");
 
-    // obtener las categorías seleccionadas
-    let selectedCategories = [...filters].filter(f => f.classList.contains("active")).map(f => f.dataset.category);
+        // obtener las categorías seleccionadas
+        let selectedCategories = [...filters].filter(f => f.classList.contains("active")).map(f => f.dataset.category);
 
-    // filtrar las cartas
-    filterCards(selectedCategories);
-  });
+        // filtrar las cartas
+        filterCards(selectedCategories);
+    });
 }
 
 
@@ -70,29 +68,26 @@ function eventoMouse(){
   });
 }
 
-// Seleccionamos el elemento HTML sobre el que se accionará
-const caja = document.getElementById("caja");
-caja.addEventListener('click',()=>{
-  console.log('Se dio clic en la caja')
-  eventoMouse()
-})
 
 
-// Código para el formulario -------------------------------------------
+
+// Formulario ----------------------------------------------------------
 
 // const myForm = document.querySelector("#myForm");
 const myForm = document.getElementById("myForm");
+if(myForm != null){
+  myForm.addEventListener('submit', (event)=> {
+    event.preventDefault();// Evita que se recarge la pagina al envíe el formulario
+  
+    console.log('Se ha enviado el formulario');
+    console.log(`Nombre: ${myForm.firstName.value}`);
+    console.log(`Apellido: ${myForm.lastName.value}`);
+    console.log(`Email: ${myForm.email.value}`);
+    console.log(`Tematica: ${myForm.tematica.value}`);
+  
+  })
+}
 
-myForm.addEventListener('submit', (event)=> {
-  event.preventDefault();// Evita que se recarge la pagina al envíe el formulario
-
-  console.log('Se ha enviado el formulario');
-  console.log(`Nombre: ${myForm.firstName.value}`);
-  console.log(`Apellido: ${myForm.lastName.value}`);
-  console.log(`Email: ${myForm.email.value}`);
-  console.log(`Tematica: ${myForm.tematica.value}`);
-
-})
 
 
 // Calculadora ----------------------------------------------------------
@@ -145,9 +140,16 @@ function num_aleatorios(){
   let cantidad_nums = prompt("Introduce el segundo número:");
   let result_place = document.getElementById("result_num_rdom")
   let numeros_unicos = new Set();
-  while (numeros_unicos.size < cantidad_nums) {
-    numeros_unicos.add(Math.floor(Math.random() * 100));
+  let resultado 
+  if(cantidad_nums < 50){
+    while (numeros_unicos.size < cantidad_nums) {
+      numeros_unicos.add(Math.floor(Math.random() * 100));
+      resultado = [...numeros_unicos];
+    }
+  }else{
+    resultado = "Petición demasiado grande";
   }
+  
   console.log(numeros_unicos);
-  result_place.innerHTML = [...numeros_unicos]
+  result_place.innerHTML = resultado;
 }
