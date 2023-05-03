@@ -38,8 +38,19 @@ body{
     display: flex;
 }
 
-
-
+form{
+    background-color: #eaeaea;
+    border-radius: 5px;
+    padding: 10px;
+}
+#caja{
+    width: 60%;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 5px;
+    margin: 10px auto;
+    border: 3px solid rgb(107, 107, 107);
+}
 
 .contenedor-principal{
     margin: 1% 1%;

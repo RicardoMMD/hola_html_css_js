@@ -1,17 +1,31 @@
+// Clases -----------------------------------------------------------------
+class items_tec{
+  // Clase para cada ítem del tarjetero de la pagina index 
+  constructor(titulo, url_destino, data_categories, img_url, icon_url){
+    this.titulo = titulo;
+    this.url_destino = url_destino;
+    this.data_categories = data_categories;
+    this.img_url = img_url;
+    this.icon_url = icon_url;
+  }
+}
+
 
 
 function filterCards(selectedCategories) {
-    // select cards
+    // Enlistamos los elementos de clase "card"
     const cards = document.querySelectorAll(".card");
-    // loop through each card
+    // recorremos cada tarjeta
     for (let card of cards) {
-        // get the card's categories
+        // tomamos las categorias de la tarjeta 
         let cardCategories = JSON.parse(card.dataset.categories);
+        console.log(cardCategories);
 
-        // check if the selected categories overlap with the card's categories
+        // comprobar si las categorías seleccionadas se superponen con las categorías de la tarjeta
         let overlap = selectedCategories.some(selectedCategory => cardCategories.includes(selectedCategory));
+        console.log(overlap)
         
-        // show the card if there is an overlap or if "all" is selected
+        // mostrar las tarjetas con la categoria seleccionada o si se selecciona "All"
         if (overlap || selectedCategories.includes("all")) {
             card.style.display = "block";
         } else {
@@ -20,19 +34,19 @@ function filterCards(selectedCategories) {
     }
 }
 
-// select filters
+// Seleccionamos los objetos de clase filter-btn
 const filters = document.querySelectorAll(".filter-btn");
 
 // add click event listeners to filters
 for (let filter of filters) {
-  filter.addEventListener("click", function() {
+  filter.addEventListener("click", () => {
     
-    // remove the "active" class from all filters
+    // remover la clase "active" de todos los botones
     for (let f of filters) {
       f.classList.remove("active");
     }
 
-    // add the "active" class to the clicked filter
+    // añadimo la calse "active" al boton seleccionado
     this.classList.add("active");
 
     // get the selected categories
@@ -47,32 +61,82 @@ for (let filter of filters) {
 
 
 
+// Eventos con el mouse -------------------------------------------------
+
+function eventoMouse(){
+  caja.addEventListener('mouseover',(event)=>{
+    event.preventDefault();
+    console.log(`Se movio el mouse a la pocicion ${event.clientX},${event.clientY}`);
+  });
+}
+
+// Seleccionamos el elemento HTML sobre el que se accionará
+const caja = document.getElementById("caja");
+caja.addEventListener('click',()=>{
+  console.log('Se dio clic en la caja')
+  eventoMouse()
+})
 
 
-// Controles del carrusel -------------------------------------------
+// Código para el formulario -------------------------------------------
 
-// Obtenemos elementos por sus clases
-const videos = [...document.querySelectorAll(".video_wrapper")];
-const arrowAfter = document.querySelector('#after');
-const arrowBefore = document.querySelector('#before');
-let valor;
+// const myForm = document.querySelector("#myForm");
+const myForm = document.getElementById("myForm");
+
+myForm.addEventListener('submit', (event)=> {
+  event.preventDefault();// Evita que se recarge la pagina al envíe el formulario
+
+  console.log('Se ha enviado el formulario');
+  console.log(`Nombre: ${myForm.firstName.value}`);
+  console.log(`Apellido: ${myForm.lastName.value}`);
+  console.log(`Email: ${myForm.email.value}`);
+  console.log(`Tematica: ${myForm.tematica.value}`);
+
+})
 
 
+// Calculadora ----------------------------------------------------------
 
-arrowAfter.addEventListener('click',()=>changePosition(1));
-arrowBefore.addEventListener('click',()=>changePosition(-1));
+function calculadora(){
+  // Pedimos al usuario que introduzca el primer número
+let num1 = prompt("Introduce el primer número:");
+        
+// Convertimos el número introducido a tipo numérico
+num1 = parseFloat(num1);
 
-function changePosition(cambio){
-  let currentElement = Number(document.querySelector('.video_wrapper--show').dataset.id);
+// Pedimos al usuario que introduzca el segundo número
+let num2 = prompt("Introduce el segundo número:");
 
-  valor = currentElement;
-  valor += cambio;
+// Convertimos el número introducido a tipo numérico
+num2 = parseFloat(num2);
 
-  if(valor === 0 || valor == videos.length+1){
-    valor = valor === 0 ? videos.length : 1;
+// Pedimos al usuario que introduzca la operación a realizar
+let operacion = prompt("Introduce la operación a realizar (+, -, *, /):");
+
+// Variable donde guardaremos el resultado de la operación
+let resultado;
+
+// Realizamos la operación correspondiente
+switch (operacion) {
+    case "+":
+        resultado = num1 + num2;
+        break;
+    case "-":
+        resultado = num1 - num2;
+        break;
+    case "*":
+        resultado = num1 * num2;
+        break;
+    case "/":
+        resultado = num1 / num2;
+        break;
+    default:
+        alert("Operación no válida");
   }
 
-  videos[currentElement-1].classList.toggle('video_wrapper--show');
-  videos[valor-1].classList.toggle('video_wrapper--show');
+  // Mostramos el resultado por consola y alert
+		console.log("El resultado de la operación " + num1 + " " + operacion + " " + num2 + " es: " + resultado);
+    alert("El resultado de la operación " + num1 + " " + operacion + " " + num2 + " es: " + resultado);
+	
+}
 
-};
