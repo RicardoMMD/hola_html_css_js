@@ -140,3 +140,14 @@ switch (operacion) {
 	
 }
 
+// Generador de numeros aleatorios
+function num_aleatorios(){
+  let cantidad_nums = prompt("Introduce el segundo número:");
+  let result_place = document.getElementById("result_num_rdom")
+  let numeros_unicos = new Set();
+  while (numeros_unicos.size < cantidad_nums) {
+    numeros_unicos.add(Math.floor(Math.random() * 100));
+  }
+  console.log(numeros_unicos);
+  result_place.innerHTML = [...numeros_unicos]
+}

@@ -683,6 +683,15 @@ form {
   border: 3px solid rgb(107, 107, 107);
 }
 
+#result_num_rdom {
+  width: 50%;
+  height: 30px;
+  background-color: rgb(171, 255, 190);
+  border-radius: 5px;
+  margin: 10px auto;
+  border: 3px solid rgb(107, 107, 107);
+}
+
 .contenedor-principal {
   margin: 1% 1%;
 }
